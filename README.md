@@ -6,8 +6,12 @@ a basic autorange mechanism.
 
 The current improvement provides better POO integration: The code is split into
 several functions avoiding redoing unnecessary calculations for better efficiency.
+Moreover, a refactoring has been done to support interrupts from the TCS34725 chip.
 
-Thus the attributes are mainly public:
+So this version fully supports asynchronous as shown in the example below.
+
+
+The attributes are mainly public:
 
 ```c++
 uint16_t r_raw, g_raw, b_raw, c_raw;
@@ -40,4 +44,4 @@ attachInterrupt(digitalPinToInterrupt(SENSOR_INTERRUPT_PIN), ISR_sensor, FALLING
 rgb_sensor.tcs.write8(TCS34725_PERS, TCS34725_PERS_NONE);
 // RGBC interrupt enable. When asserted, permits RGBC interrupts to be generated.
 rgb_sensor.tcs.setInterrupt(true);
-```c++
+```

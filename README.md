@@ -1,5 +1,5 @@
  
-An improved version of [Adafruit TCS34725](https://github.com/adafruit/Adafruit_TCS34725)
+An improved version of [Adafruit TCS34725 (tested on v1.4.1)](https://github.com/adafruit/Adafruit_TCS34725)
 wrapper given in their examples.
 
 The wrapper provides improved lux and color temperature calculations as well as
